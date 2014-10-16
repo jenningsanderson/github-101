@@ -1,6 +1,6 @@
 Github 101
 ==========
-GitHub 101 Repository for Maptime Boulder!
+Robert's GitHub 101 Repository for Maptime Boulder!
 
 
 ##Slides Available Here:
