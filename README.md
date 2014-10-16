@@ -1,4 +1,4 @@
-Github 101
+Robert's Github 101
 ==========
 Robert's GitHub 101 Repository for Maptime Boulder!
 
