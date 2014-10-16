@@ -11,3 +11,5 @@ GitHub 101 Repository for Maptime Boulder!
 1. Fork this repository to create your own copy
 2. Change this file
 3. Play!
+4. Profit.
+5. 
