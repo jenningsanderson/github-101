@@ -85,13 +85,13 @@ def run_build(args={})
 	strings = []
 
 	File.open('index.html','w') do |f|
-		f.write(front_matter)
+		f.puts(front_matter)
 		slides.each do |slide|
-			f.write('<section>')
-			f.write(File.read('slides/'+slide))
-			f.write('</section>')
+			f.puts('<section>')
+			f.puts(File.read('slides/'+slide))
+			f.puts('</section>')
 		end
-		f.write(tail_matter)
+		f.puts(tail_matter)
 	end
 end
 
