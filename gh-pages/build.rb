@@ -78,18 +78,23 @@ def run_build(args={})
 	front_matter = args[:head]
 	tail_matter  = args[:tail]
 
-	slides = Dir.entries('slides')
-	slides.sort!
-	slides.reject!{|x| !x.end_with? '.html'}
+	slide_files = Dir.entries('slides')
+	slide_files.reject!{|x| !x.end_with? '.html'}
+
+	slides = slide_files.map{|x| {slide: x.split('.')[0].to_i, file: x}}
+
+	slides.sort_by!{|x| x[:slide]}
+
+	#More importantly, slides should have frontmatter (will do that)
 
 	strings = []
 
 	File.open('index.html','w') do |f|
 		f.puts(front_matter)
-		slides.each_with_index do |slide, idx|
-			f.puts("<!-- Slide: #{idx}-->")
+		slides.each do |s|
+			f.puts("<!-- Slide: #{s[:slide]}-->")
 			f.puts('<section>')
-			f.puts(File.read('slides/'+slide))
+			f.puts(File.read('slides/'+s[:file]))
 			f.puts('</section>')
 		end
 		f.puts(tail_matter)
