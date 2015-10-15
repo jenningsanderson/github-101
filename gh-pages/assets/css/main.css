@@ -6,4 +6,17 @@ p.big{
 p.reallybig{
 	font-size: 600%;
 	text-align: left;
+	font-weight: 800;
+}
+
+h1#title{
+	font-size: 300%;
+}
+
+.reveal h3{
+	text-transform: none;
+}
+
+.dark{
+	color: #333;
 }
