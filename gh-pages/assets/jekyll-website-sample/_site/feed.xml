@@ -4,10 +4,10 @@
     <title>My Sample Jekyll Site</title>
     <description>Write an awesome description for your new site here. You can edit this line in _config.yml. It will appear in your document head meta (for Google search results) and in your feed.xml site description.
 </description>
-    <link>http://yourdomain.com/gh-pages/assets/jekyll-website-sample/_site/</link>
-    <atom:link href="http://yourdomain.com/gh-pages/assets/jekyll-website-sample/_site/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Thu, 15 Oct 2015 11:57:07 -0600</pubDate>
-    <lastBuildDate>Thu, 15 Oct 2015 11:57:07 -0600</lastBuildDate>
+    <link>http://yourdomain.com/github-101/gh-pages/assets/jekyll-website-sample/_site/</link>
+    <atom:link href="http://yourdomain.com/github-101/gh-pages/assets/jekyll-website-sample/_site/feed.xml" rel="self" type="application/rss+xml"/>
+    <pubDate>Thu, 15 Oct 2015 12:58:35 -0600</pubDate>
+    <lastBuildDate>Thu, 15 Oct 2015 12:58:35 -0600</lastBuildDate>
     <generator>Jekyll v2.5.3</generator>
     
       <item>
@@ -28,8 +28,8 @@
 
 </description>
         <pubDate>Thu, 15 Oct 2015 05:17:11 -0600</pubDate>
-        <link>http://yourdomain.com/gh-pages/assets/jekyll-website-sample/_site/jekyll/update/2015/10/15/welcome-to-jekyll.html</link>
-        <guid isPermaLink="true">http://yourdomain.com/gh-pages/assets/jekyll-website-sample/_site/jekyll/update/2015/10/15/welcome-to-jekyll.html</guid>
+        <link>http://yourdomain.com/github-101/gh-pages/assets/jekyll-website-sample/_site/jekyll/update/2015/10/15/welcome-to-jekyll.html</link>
+        <guid isPermaLink="true">http://yourdomain.com/github-101/gh-pages/assets/jekyll-website-sample/_site/jekyll/update/2015/10/15/welcome-to-jekyll.html</guid>
         
         
         <category>jekyll</category>
