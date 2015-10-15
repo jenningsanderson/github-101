@@ -16,8 +16,7 @@ front_matter = %Q{
 
 		<!-- Code syntax highlighting -->
 		<link rel="stylesheet" href="http://s.townsendjennings.com/reveal/lib/css/zenburn.css">
-		<link rel="stylesheet" href="http://s.townsendjennings.com/reveal/css/custom.css">
-
+		
 		<!-- This is the main css over-ride -->
 		<link rel="stylesheet" href="assets/css/main.css">
 
@@ -40,11 +39,12 @@ tail_matter = %Q{
 			</div>
 		</div>
 <!-- THIS IS WHERE IT CALLS THE SCRIPTS ! -->
-		<script src="assets/js/custom.js"
+		
 
 		<script src="http://s.townsendjennings.com/reveal/lib/js/head.min.js"></script>
 		<script src="http://s.townsendjennings.com/reveal/js/reveal.js"></script>
-
+		<script src="assets/js/custom.js"></script>
+		
 		<script>
 
 			// Full list of configuration options available at:
@@ -86,7 +86,8 @@ def run_build(args={})
 
 	File.open('index.html','w') do |f|
 		f.puts(front_matter)
-		slides.each do |slide|
+		slides.each_with_index do |slide, idx|
+			f.puts("<!-- Slide: #{idx}-->")
 			f.puts('<section>')
 			f.puts(File.read('slides/'+slide))
 			f.puts('</section>')
@@ -99,10 +100,13 @@ if __FILE__ == $0
 
 	require 'listen'
 
+	run_build(	head: front_matter,
+				tail: tail_matter	)
+	
+
 	listener = Listen.to('slides') do |modified, added, removed| 
-  		run_build(
-			head: front_matter,
-			tail: tail_matter)
+		run_build(	head: front_matter,
+					tail: tail_matter	)
 	end
 
 	listener.start
