@@ -10,3 +10,11 @@ GitHub 101 Repository for Maptime Boulder!
 ##Steps
 1. Fork this repository to create your own copy
 2. Play!
+
+
+
+If we have time
+---------------
+
+##Gists
+gists.github.com
