@@ -1,0 +1,88 @@
+<section>
+	<h3>Configuring Jekyll</h3>
+</section>
+
+<section>
+	<h3><code>_config.yml</code></h3>
+	<pre><code># Site settings
+title: My Sample Jekyll Site
+description: This is a sample Jekyll Website
+baseurl: "/gh-pages/assets/jekyll-website-sample/_site" # the subpath of your site, e.g. /blog/
+url: "http://yourdomain.com" # the base hostname & protocol for your site
+twitter_username: maptimeboulder
+
+# Build settings
+markdown: kramdown
+	</pre></code>
+</section>
+
+<section>
+	<h3><code>index.html</code></h3>
+<pre><code>---
+layout: default
+---
+
+&lt;div class="home">
+
+  &lt;h1 class="page-heading">Posts</h1>
+
+  &lt;ul class="post-list">
+    {% for post in site.posts %}
+      &lt;li>
+        &lt;span class="post-meta">{{ post.date | date: "%b %-d, %Y" }}&lt;/span>
+
+        &lt;h2>
+          &lt;a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}&lt;/a>
+        &lt;/h2>
+      &lt;/li>
+    {% endfor %}
+  &lt;/ul>
+
+  &lt;p class="rss-subscribe">subscribe &lt;a href="{{ "/feed.xml" | prepend: site.baseurl }}">via RSS&lt;/a>&lt;/p>
+&lt;/div></code></pre>
+</section>
+<section>
+<h3><code>about.md</code></h3>
+<pre><code>
+	---
+layout: page
+title: About
+permalink: /about/
+---
+
+This is the base Jekyll theme. You can find out more info about customizing your Jekyll theme, as well as basic Jekyll usage documentation at [jekyllrb.com](http://jekyllrb.com/)
+
+You can find the source code for the Jekyll new theme at: [github.com/jglovier/jekyll-new](https://github.com/jglovier/jekyll-new)
+
+You can find the source code for Jekyll at [github.com/jekyll/jekyll](https://github.com/jekyll/jekyll)
+</code></pre>
+</section>
+<section>
+	<h3><code>_posts</code></h3>
+	<pre><code>---
+layout: post
+title:  "Welcome to Jekyll!"
+date:   2015-10-15 11:17:11
+categories: jekyll update
+---
+You’ll find this post in your `_posts` directory. Go ahead and edit it and re-build the site to see your changes. You can rebuild the site in many different ways, but the most common way is to run `jekyll serve`, which launches a web server and auto-regenerates your site when a file is updated.
+
+To add new posts, simply add a file in the `_posts` directory that follows the convention `YYYY-MM-DD-name-of-post.ext` and includes the necessary front matter. Take a look at the source for this post to get an idea about how it works.
+
+Jekyll also offers powerful support for code snippets:
+
+{% highlight ruby %}
+def print_hi(name)
+  puts "Hi, #{name}"
+end
+print_hi('Tom')
+#=> prints 'Hi, Tom' to STDOUT.
+{% endhighlight %}
+
+Check out the [Jekyll docs][jekyll] for more info on how to get the most out of Jekyll. File all bugs/feature requests at [Jekyll’s GitHub repo][jekyll-gh]. If you have questions, you can ask them on [Jekyll’s dedicated Help repository][jekyll-help].
+
+[jekyll]:      http://jekyllrb.com
+[jekyll-gh]:   https://github.com/jekyll/jekyll
+[jekyll-help]: https://github.com/jekyll/jekyll-help
+</code></pre>
+</section>

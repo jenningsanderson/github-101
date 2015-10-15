@@ -1,18 +1,61 @@
-<h3>This is the third slide</h3>
+<section>
+	<h3>Websites</h3>
 
-<pre><code data-trim contenteditable>
-function linkify( selector ) {
-  if( supports3DTransforms ) {
+	<p class="fragment">It's 2015</p>
+	<p class="fragment">There are 100s of website tools out there, why use GitHub?</p>
+	<p class="fragment">
+	Wordpress, Tumblr, Blogspot, Drupal, Ruby on Rails, 
+	</p>
+</section>
 
-    var nodes = document.querySelectorAll( selector );
+<section>
+	<h3>Browsers only know 3 things</h3>
+	<ol>
+		<li class="fragment">HTML</li>
+		<li class="fragment">CSS</li>
+		<li class="fragment">Javascript</li>
+	</ol>
+	<p class="fragment">
+		So why complicate it?
+	</p>
+	<div class="fragment">
+	<code> static-website-sample </code>
+	<pre><code>.
+├── index.html
+└── main.css
 
-    for( var i = 0, len = nodes.length; i &lt; len; i++ ) {
-      var node = nodes[i];
+0 directories, 2 files</code></pre>
+</div>
 
-      if( !node.className ) {
-        node.className += ' roll';
-      }
-    }
-  }
+</section>
+
+<section>
+<code>index.html</code>
+	<pre><code>&lt;html>
+	&lt;head>
+		<title>Sample Website</title>
+		<link rel="stylesheet" href="main.css">
+	&lt;/head>
+	&lt;body>
+		<h1>A title</h1>
+		<h3>A subtitle</h3>
+		<p>Some paragraph content</p>
+	&lt;/body>
+&lt;/html></code></pre>
+	
+<code>main.css</code>
+	<pre><code>h1{
+	font-size: 36px;
+	color: red;
+	text-align: center;
 }
-</code></pre>
+
+p{
+	border: 3px solid blue;
+}</code></pre>
+</section>
+
+<section>
+	<iFrame src="assets/static-website-sample/index.html" width="400" height="300" style="background-color:white">
+	</iFrame>
+</section>

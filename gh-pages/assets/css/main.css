@@ -1,0 +1,9 @@
+p.big{
+	font-size: 400%;
+	text-align: left;
+}
+
+p.reallybig{
+	font-size: 600%;
+	text-align: left;
+}
